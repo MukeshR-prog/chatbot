@@ -5,6 +5,7 @@ import ChatList from './ChatList'
 import ChatWindow from './ChatWindow'
 import { useSignOut } from '@nhost/nextjs'
 import { LogOut, Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 export default function ChatLayout() {
   const [selectedChatId, setSelectedChatId] = useState(null)
@@ -31,7 +32,7 @@ export default function ChatLayout() {
           <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-indigo-600 to-purple-600">
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center rounded-xl text-white bg-white bg-opacity-20 h-10 w-10">
-              <img src="/bot.png" alt="Logo" className="h-10" />
+              <Image src="/bot.png" alt="Logo" width={40} height={40}/>
               </div>
               <h1 className="text-xl font-bold text-white">AI Chatbot</h1>
             </div>
